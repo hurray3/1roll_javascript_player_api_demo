@@ -2,7 +2,7 @@
 # 1Roll Javascript Player API Demo
 
 ## サンプルページ
-https://hurray3.github.io/1roll_javascript_player_api_demo/0.1.0/index.html
+https://hurray3.github.io/1roll_javascript_player_api_demo/index.html
 
 
 ## 使用方法
