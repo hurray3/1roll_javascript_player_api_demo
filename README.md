@@ -222,7 +222,7 @@ Class OnerollPlayer
 	**parmas**
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
 	* `event.data.duration` - このtargetの動画の再生長さ
-
+	___
 * `onPlayerStateChange(event)`
 プレイヤーの再生状態が変更されたときに呼び出されます。  
 
@@ -233,6 +233,7 @@ Class OnerollPlayer
 	  * play - 再生開始
 	  * pause - 一時停止
 	  * complete - 再生完了
+	___
 
 * `onPlayerTime(event)`
 再生中に定期的に呼び出されます。  
@@ -241,31 +242,35 @@ Class OnerollPlayer
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
 	* `event.data.position` - このtargetの動画の現在の再生位置
 	* `event.data.duration` - このtargetの動画の再生長さ
+	___
 
 * `onPlayed25P(event)`
   再生時間が動画の長さの25%以上に達した時に1度だけ呼び出されます。
   
 	**parmas**
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
+	___
 
 * `onPlayed50P(event)`
 	再生時間が動画の長さの50%以上に達した時に1度だけ呼び出されます。
 	
 	**parmas**
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
+	___
 
 * `onPlayed75P(event)`
   再生時間が動画の長さの75%以上に達した時に1度だけ呼び出されます。
   
 	**parmas**
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
-
+	___
 
 * `onPlayed90P(event)`
   再生時間が動画の長さの90%以上に達した時に1度だけ呼び出されます。
   
 	**parmas**
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
+	___
 
 * `onPlayed99P(event)`
   再生時間が動画の長さの99%以上に達した時に1度だけ呼び出されます。
@@ -273,8 +278,11 @@ Class OnerollPlayer
 	**parmas**
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
 
+	___
+
 * `onPlayed100P(event)`
  再生時間が動画の長さの100%に達した時に1度だけ呼び出されます。
  
 	**parmas**
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
+	___
