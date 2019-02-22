@@ -179,7 +179,6 @@ function onOnerollIframeAPIReady() {
 
 
 ### クラス
-
 ```
 Class OnerollPlayerManager
 ```
@@ -214,8 +213,8 @@ Class OnerollPlayer
 * `player.seek(time:Number):Void`  
 動画を再生位置を変更します。timeは秒数を指定します。
 
-#### イベント
-
+### イベント
+___
 * `onPlayerReady(event)`
 再生の準備ができたタイミングで呼び出されます。  
 
