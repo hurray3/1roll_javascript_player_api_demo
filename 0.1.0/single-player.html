@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+        .player-wrapper{
+            width:360px;
+        }
+        .player{
+            width:100%;
+            padding-bottom: 56.25%;
+            height:0px;
+            position: relative;
+        }
+        .player iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        </style>
+
+        <script>
+
+        var tag = document.createElement('script');
+        tag.src = "https://cloud-player.1roll.jp/iframe-api?version=0.1.0";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);            
+
+        var playerManager;
+        var player;
+
+        function onOnerollIframeAPIReady(){
+
+            playerManager = new OnerollPlayerManager();
+
+            player = playerManager.create(
+                'player-demo',
+                {
+                    videoId: 'reUuC88AE0PD',
+                    allowfullscreen: true,
+                    jsonld: true,
+                    events:{
+                        onPlayerReady:       onPlayerReady,
+                        onPlayerStateChange: onPlayerStateChange,
+                        onPlayerTime:        onPlayerTime,
+                        onPlayed25P:         onPlayed25P,
+                        onPlayed50P:         onPlayed50P,
+                        onPlayed75P:         onPlayed75P,
+                        onPlayed90P:         onPlayed90P,
+                        onPlayed99P:         onPlayed99P,
+                        onPlayed100P:        onPlayed100P
+                    },
+                    attributes: {
+                        class: 'player-iframe'
+                    }
+                }
+            );
+        }
+
+        function onPlayerReady(event) {
+            console.log(event.target.getDuration());
+        }
+
+        function onPlayerStateChange(event) {
+            console.log(event);
+        }
+
+        function onPlayerTime(event) {
+            console.log(event);
+        }
+
+        function onPlayed25P(event){
+            console.log("25% played");
+        }
+        function onPlayed50P(event){
+            console.log("50% played");
+        }
+        function onPlayed75P(event){
+            console.log("75% played");
+        }
+        function onPlayed90P(event){
+            console.log("90% played");
+        }
+        function onPlayed99P(event){
+            console.log("99% played");
+        }
+        function onPlayed100P(event){
+            console.log("100% played");
+        }
+        </script>
+    </head>
+    <body>
+        <div class="player-wrapper">
+            <div class="player" id="player-demo"></div>
+        </div>
+    </body>
+</html>
