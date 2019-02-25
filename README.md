@@ -67,8 +67,7 @@ https://hurray3.github.io/1roll_javascript_player_api_demo/index.html
                         onPlayed50P:         onPlayed50P,
                         onPlayed75P:         onPlayed75P,
                         onPlayed90P:         onPlayed90P,
-                        onPlayed99P:         onPlayed99P,
-                        onPlayed100P:        onPlayed100P
+                        onPlayed99P:         onPlayed99P
                     },
                     attributes: {
                         class: 'player-iframe'
@@ -103,9 +102,6 @@ https://hurray3.github.io/1roll_javascript_player_api_demo/index.html
         }
         function onPlayed99P(event){
             console.log("99% played");
-        }
-        function onPlayed100P(event){
-            console.log("100% played");
         }
         </script>
     </head>
@@ -144,8 +140,7 @@ function onOnerollIframeAPIReady() {
                 onPlayed50P:         onPlayed50P,
                 onPlayed75P:         onPlayed75P,
                 onPlayed90P:         onPlayed90P,
-                onPlayed99P:         onPlayed99P,
-                onPlayed100P:        onPlayed100P
+                onPlayed99P:         onPlayed99P
             },
             attributes: {
                 class: 'player-iframe'
@@ -181,7 +176,6 @@ function onOnerollIframeAPIReady() {
     * `onPlayed75P (Function) [option]` - OnerollPlayerで動画の75%以上再生された時に値として渡した関数"onPlayed75P"が実行されます。※一度のみ実行されます
     * `onPlayed90P (Function) [option]` - OnerollPlayerで動画の90%以上再生された時に値として渡した関数"onPlayed90P"が実行されます。※一度のみ実行されます
     * `onPlayed99P (Function) [option]` - OnerollPlayerで動画の99%以上再生された時に値として渡した関数"onPlayed99P"が実行されます。※一度のみ実行されます
-    * `onPlayed100P (Function) [option]` - OnerollPlayerで動画の100%再生された時に値として渡した関数"onPlayed100P"が実行されます。※一度のみ実行されます
   * `attributes (Object) [option]` - iframeタグに属性を設定します。この例では、class名を渡しています。
 
 
@@ -286,16 +280,10 @@ ___
 	___
 
 * `onPlayed99P(event)`
-  再生時間が動画の長さの99%以上に達した時に1度だけ呼び出されます。
+  再生時間が動画の長さの99%以上に達した時に1度だけ呼び出されます。  
+  15秒以内の短い動画の場合呼ばれない可能性があります。
   
 	**parmas**
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
 
-	___
-
-* `onPlayed100P(event)`
- 再生時間が動画の長さの100%に達した時に1度だけ呼び出されます。
- 
-	**parmas**
-	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
 	___
