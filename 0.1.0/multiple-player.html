@@ -67,6 +67,7 @@ and open the template in the editor.
                             onPlayerReady:       onPlayerReady,
                             onPlayerStateChange: onPlayerStateChange,
                             onPlayerTime:        onPlayerTime,
+                            onPlayed0P:          onPlayed0P,
                             onPlayed25P:         onPlayed25P,
                             onPlayed50P:         onPlayed50P,
                             onPlayed75P:         onPlayed75P,
@@ -95,6 +96,9 @@ and open the template in the editor.
             console.log(event.target.videoId, event);
         }
 
+        function onPlayed0P(event){
+            console.log(event.target.videoId, "0% played");
+        }
         function onPlayed25P(event){
             console.log(event.target.videoId, "25% played");
         }

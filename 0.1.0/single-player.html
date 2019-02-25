@@ -48,6 +48,7 @@
                         onPlayerReady:       onPlayerReady,
                         onPlayerStateChange: onPlayerStateChange,
                         onPlayerTime:        onPlayerTime,
+                        onPlayed0P:          onPlayed0P,
                         onPlayed25P:         onPlayed25P,
                         onPlayed50P:         onPlayed50P,
                         onPlayed75P:         onPlayed75P,
@@ -74,6 +75,9 @@
             console.log(event);
         }
 
+        function onPlayed0P(event){
+            console.log("0% played");
+        }
         function onPlayed25P(event){
             console.log("25% played");
         }
