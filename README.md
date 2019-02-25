@@ -1,6 +1,10 @@
 
 # 1Roll Javascript Player API Demo
 
+## 概要
+1Roll Javascript Player APIは、複数の1Rollプレイヤーを表示、操作、情報の取得（動画の長さ、再生位置等）をすることができます。
+動画の再生・停止・シークなどの操作から動画をどこまで見てコンバージョンに至ったかなどの計測を行うこともできます。
+
 ## サンプルページ
 https://hurray3.github.io/1roll_javascript_player_api_demo/index.html
 
@@ -134,6 +138,7 @@ function onOnerollIframeAPIReady() {
                 onPlayerReady:       onPlayerReady,
                 onPlayerStateChange: onPlayerStateChange,
                 onPlayerTime:        onPlayerTime,
+                onPlayed0P:          onPlayed0P,
                 onPlayed25P:         onPlayed25P,
                 onPlayed50P:         onPlayed50P,
                 onPlayed75P:         onPlayed75P,
@@ -169,6 +174,7 @@ function onOnerollIframeAPIReady() {
     * `onPlayerReady (Function) [option]` - OnerollPlayerが再生可能状態になったときに、値として渡した関数"onPlayerReady"が実行されます。
     * `onPlayerStateChange (Function) [option]` - OnerollPlayerの状態が変わった時に、値として渡した関数"onPlayerStateChange"が実行されます。
     * `onPlayerTime (Function) [option]` - OnerollPlayerで再生されている時に定期的に、値として渡した関数"onPlayerTime"が実行されます。
+    * `onPlayed0P (Function) [option]` - OnerollPlayerで動画の0%以上再生された時に値として渡した関数"onPlayed0P"が実行されます。※一度のみ実行されます
     * `onPlayed25P (Function) [option]` - OnerollPlayerで動画の25%以上再生された時に値として渡した関数"onPlayed25P"が実行されます。※一度のみ実行されます
     * `onPlayed50P (Function) [option]` - OnerollPlayerで動画の50%以上再生された時に値として渡した関数"onPlayed50P"が実行されます。※一度のみ実行されます
     * `onPlayed75P (Function) [option]` - OnerollPlayerで動画の75%以上再生された時に値として渡した関数"onPlayed75P"が実行されます。※一度のみ実行されます
@@ -241,6 +247,13 @@ ___
 	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
 	* `event.data.position` - このtargetの動画の現在の再生位置
 	* `event.data.duration` - このtargetの動画の再生長さ
+	___
+
+* `onPlayed0P(event)`
+  再生時間が動画の長さの0%以上に達した時（再生開始された時）に1度だけ呼び出されます。
+  
+	**parmas**
+	* `event.target` - イベント対象となるOnerollPlayerオブジェクト
 	___
 
 * `onPlayed25P(event)`
