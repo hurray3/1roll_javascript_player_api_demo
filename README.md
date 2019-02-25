@@ -62,6 +62,7 @@ https://hurray3.github.io/1roll_javascript_player_api_demo/index.html
                         onPlayerReady:       onPlayerReady,
                         onPlayerStateChange: onPlayerStateChange,
                         onPlayerTime:        onPlayerTime,
+                        onPlayed0P:          onPlayed0P,
                         onPlayed25P:         onPlayed25P,
                         onPlayed50P:         onPlayed50P,
                         onPlayed75P:         onPlayed75P,
